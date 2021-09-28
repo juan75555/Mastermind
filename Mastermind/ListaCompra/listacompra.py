@@ -33,6 +33,7 @@ def main():
                 i = (len(lista_fija) + 1)
             else:
                 print("Has introducido una palabra no valida. Las palabras validas son {}".format(lista_fija))
+                break
         
     guardar(lista_compra)
 
