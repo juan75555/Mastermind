@@ -3,9 +3,8 @@ SALIDA="SALIR"
 def guardar(lista_compra):
     nombre = input("Que nombre desea dar a la lista: ")
     nombre+=".txt"
-    a = open(nombre, "w")
-    a.write("\n".join(lista_compra))
-    a.close()
+    with open(nombre, "w") as a:
+        a.write("\n".join(lista_compra))
 
 def input_usuario():
     elemento_lista = input("Inserta elemento en lista (los elementos son {}): ".format(lista()))
