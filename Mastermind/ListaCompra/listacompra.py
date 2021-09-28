@@ -10,8 +10,8 @@ def guardar(lista_compra):
 def input_usuario():
     elemento_lista = input("Inserta elemento en lista: ")
     return elemento_lista
-def main():
 
+def main():
     lista_compra=[]
     lista_fija = [ "Pan" , "Pollo" , "Pipas"]
     elemento_lista = input_usuario()
