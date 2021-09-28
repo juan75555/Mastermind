@@ -1,0 +1,11 @@
+Thanks for visiting my github page. To use this game you need to install some python libreries like readchar and colorama.
+You can install them by entering in your command promp the next commands:
+pip install readchar 
+pip install colorama
+
+
+
+
+
+
+Greetings  @juan75555 :)
