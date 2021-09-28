@@ -8,15 +8,20 @@ def guardar(lista_compra):
     a.close()
 
 def input_usuario():
-    elemento_lista = input("Inserta elemento en lista: ")
+    elemento_lista = input("Inserta elemento en lista (los elementos son {}): ".format(lista()))
     return elemento_lista
 
+def lista():
+   lista_fija = [ "Pan" , "Pollo" , "Pipas"]
+   return lista_fija 
+
 def main():
+
     lista_compra=[]
     lista_fija = [ "Pan" , "Pollo" , "Pipas"]
     elemento_lista = input_usuario()
     for i in  range(len(lista_fija)):
-        if elemento_lista != SALIDA:
+        while elemento_lista != SALIDA and i<len(lista_fija):
             if lista_fija[i] == elemento_lista:
                 lista_compra.append(elemento_lista)
                 elemento_lista = input_usuario()
@@ -24,7 +29,10 @@ def main():
             else:
                 i += 1
         else:
-            exit()
+            if elemento_lista == SALIDA:
+                i = (len(lista_fija) + 1)
+            else:
+                print("Has introducido una palabra no valida. Las palabras validas son {}".format(lista_fija))
         
     guardar(lista_compra)
 
